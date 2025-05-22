@@ -726,12 +726,12 @@ class Transaction(
         """Ensure transaction has no conflicting properties."""
         super().model_post_init(__context)
 
-        if self.gas_price is not None and (
-            self.max_fee_per_gas is not None
-            or self.max_priority_fee_per_gas is not None
-            or self.max_fee_per_blob_gas is not None
-        ):
-            raise Transaction.InvalidFeePaymentError()
+        #if self.gas_price is not None and (
+         #   self.max_fee_per_gas is not None
+          #  or self.max_priority_fee_per_gas is not None
+           # or self.max_fee_per_blob_gas is not None
+        #):
+         #   raise Transaction.InvalidFeePaymentError()
 
         if "ty" not in self.model_fields_set:
             # Try to deduce transaction type from included fields
@@ -770,9 +770,9 @@ class Transaction(
             self.max_fee_per_gas = TransactionDefaults.max_fee_per_gas
         if self.ty >= 2 and self.max_priority_fee_per_gas is None:
             self.max_priority_fee_per_gas = TransactionDefaults.max_priority_fee_per_gas
-        if self.ty < 2:
-            assert self.max_fee_per_gas is None, "max_fee_per_gas must be None"
-            assert self.max_priority_fee_per_gas is None, "max_priority_fee_per_gas must be None"
+        # if self.ty < 2:
+            # assert self.max_fee_per_gas is None, "max_fee_per_gas must be None"
+            # assert self.max_priority_fee_per_gas is None, "max_priority_fee_per_gas must be None"
 
         if self.ty == 3 and self.max_fee_per_blob_gas is None:
             self.max_fee_per_blob_gas = 1
