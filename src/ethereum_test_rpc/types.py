@@ -56,7 +56,7 @@ class TransactionByHashResponse(Transaction):
         if isinstance(data, dict):
             if "gasPrice" in data and "maxFeePerGas" in data:
                 # Keep only one of the gas price fields.
-                del data["gasPrice"]
+                del data["maxFeePerGas"]
         return data
 
     def model_post_init(self, __context):
