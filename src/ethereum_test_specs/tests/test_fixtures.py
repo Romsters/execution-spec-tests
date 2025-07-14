@@ -146,7 +146,7 @@ def test_fill_state_test(
             nonce=0,
             to="0x1000000000000000000000000000000000000000",
             gas_limit=100000000,
-            gas_price=10,
+            gas_price=20_000_000_000,
             protected=False,
         )
     elif tx_type == TransactionType.ACCESS_LIST:
@@ -156,7 +156,7 @@ def test_fill_state_test(
             nonce=0,
             to="0x1000000000000000000000000000000000000000",
             gas_limit=100000000,
-            gas_price=10,
+            gas_price=20_000_000_000,
             access_list=[
                 AccessList(
                     address=0x1234,

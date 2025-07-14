@@ -258,7 +258,7 @@ def test_returncode_memory_expansion(
     tx = Transaction(
         to=contract_address,
         gas_limit=2_000_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )

@@ -247,7 +247,7 @@ def test_modexp(
         to=account,
         data=mod_exp_input.create_modexp_tx_data(),
         gas_limit=500000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=True,
         sender=sender,
     )

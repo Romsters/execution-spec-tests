@@ -77,7 +77,7 @@ def test_opcodes_in_legacy(state_test: StateTestFiller, pre: Alloc, code: Opcode
         sender=sender,
         to=address_test_contract,
         gas_limit=5_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         data="",
     )
@@ -104,7 +104,7 @@ def test_opcodes_in_create_tx(state_test: StateTestFiller, pre: Alloc, code: Opc
         sender=sender,
         to=None,
         gas_limit=5_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         data=code,
     )
@@ -160,7 +160,7 @@ def test_opcodes_in_create_operation(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         data=init_code,
         sender=sender,
@@ -225,7 +225,7 @@ def test_opcodes_in_eof_calling_legacy(
         sender=sender,
         to=address_entry_contract,
         gas_limit=5_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         data="",
     )

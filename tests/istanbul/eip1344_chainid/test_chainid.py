@@ -31,7 +31,7 @@ def test_chainid(state_test: StateTestFiller, pre: Alloc):
         chain_id=0x01,
         to=contract_address,
         gas_limit=100000000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         sender=sender,
     )
 

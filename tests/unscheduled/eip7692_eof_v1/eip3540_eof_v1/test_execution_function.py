@@ -315,7 +315,7 @@ def test_eof_functions_contract_call_succeed(
     tx = Transaction(
         to=caller_address,
         gas_limit=50000000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         data="",
         sender=sender,
@@ -348,7 +348,7 @@ def test_eof_functions_contract_call_fail(
     tx = Transaction(
         to=caller_address,
         gas_limit=50000000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         data="",
         sender=sender,
@@ -413,7 +413,7 @@ def test_eof_functions_contract_call_within_deep_nested(
     tx = Transaction(
         to=callee_address,
         gas_limit=50000000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         data="",
         sender=sender,

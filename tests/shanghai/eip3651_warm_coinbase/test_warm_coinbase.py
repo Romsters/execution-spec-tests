@@ -105,7 +105,7 @@ def test_warm_coinbase_call_out_of_gas(
         nonce=0,
         to=caller_address,
         gas_limit=100_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         sender=sender,
     )
 
@@ -245,7 +245,7 @@ def test_warm_coinbase_gas_usage(
         nonce=0,
         to=measure_address,
         gas_limit=100_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         sender=sender,
     )
 

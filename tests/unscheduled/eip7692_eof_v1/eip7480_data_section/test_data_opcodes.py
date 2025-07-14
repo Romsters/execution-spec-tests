@@ -125,7 +125,7 @@ def test_data_section_succeed(
     tx = Transaction(
         to=entry_point,
         gas_limit=50000000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         data="",
         sender=sender,

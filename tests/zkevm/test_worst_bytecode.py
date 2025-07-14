@@ -144,7 +144,7 @@ def test_worst_bytecode_single_opcode(
     contracts_deployment_tx = Transaction(
         to=factory_caller_address,
         gas_limit=env.gas_limit,
-        gas_price=10**9,
+        gas_price=20_000_000_000,**9,
         data=Hash(num_contracts),
         sender=pre.fund_eoa(),
     )
@@ -190,7 +190,7 @@ def test_worst_bytecode_single_opcode(
     opcode_tx = Transaction(
         to=opcode_address,
         gas_limit=attack_gas_limit,
-        gas_price=10**9,
+        gas_price=20_000_000_000,**9,
         sender=pre.fund_eoa(),
     )
 

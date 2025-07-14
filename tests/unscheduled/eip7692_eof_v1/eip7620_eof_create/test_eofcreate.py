@@ -65,7 +65,7 @@ def test_simple_eofcreate(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -113,7 +113,7 @@ def test_eofcreate_then_dataload(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -171,7 +171,7 @@ def test_eofcreate_then_call(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -243,7 +243,7 @@ def test_auxdata_variations(state_test: StateTestFiller, pre: Alloc, auxdata_byt
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -302,7 +302,7 @@ def test_calldata(state_test: StateTestFiller, pre: Alloc):
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -356,7 +356,7 @@ def test_eofcreate_in_initcode(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -411,7 +411,7 @@ def test_eofcreate_in_initcode_reverts(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -473,7 +473,7 @@ def test_return_data_cleared(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -527,7 +527,7 @@ def test_address_collision(
     tx = Transaction(
         to=contract_address,
         gas_limit=300_000_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )

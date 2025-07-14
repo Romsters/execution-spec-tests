@@ -33,7 +33,7 @@ def test_access_list(state_test: StateTestFiller, pre: Alloc):
         to=contract_address,
         value=1,
         gas_limit=323328,
-        gas_price=7,
+        gas_price=20_000_000_000,
         access_list=[
             AccessList(
                 address="0x0000000000000000000000000000000000000000",

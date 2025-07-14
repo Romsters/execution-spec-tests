@@ -19,7 +19,7 @@ from ..types import AccessList, Hash, Transaction
             Transaction(
                 ty=0,
                 nonce=0,
-                gas_price=1000000000,
+                gas_price=20_000_000_000,00000000,
                 protected=False,
             ),
             (
@@ -36,7 +36,7 @@ from ..types import AccessList, Hash, Transaction
             Transaction(
                 ty=0,
                 nonce=0,
-                gas_price=1000000000,
+                gas_price=20_000_000_000,00000000,
                 protected=False,
                 to=None,
             ),
@@ -54,7 +54,7 @@ from ..types import AccessList, Hash, Transaction
             Transaction(
                 ty=0,
                 nonce=0,
-                gas_price=1000000000,
+                gas_price=20_000_000_000,00000000,
                 protected=True,
             ),
             (
@@ -71,7 +71,7 @@ from ..types import AccessList, Hash, Transaction
             Transaction(
                 ty=1,
                 nonce=0,
-                gas_price=1000000000,
+                gas_price=20_000_000_000,00000000,
             ),
             (
                 1,
@@ -87,7 +87,7 @@ from ..types import AccessList, Hash, Transaction
             Transaction(
                 ty=1,
                 nonce=0,
-                gas_price=1000000000,
+                gas_price=20_000_000_000,00000000,
                 access_list=[],
             ),
             (
@@ -104,7 +104,7 @@ from ..types import AccessList, Hash, Transaction
             Transaction(
                 ty=1,
                 nonce=0,
-                gas_price=1000000000,
+                gas_price=20_000_000_000,00000000,
                 access_list=[
                     AccessList(
                         address="0x0000000000000000000000000000000000000123",
@@ -128,7 +128,7 @@ from ..types import AccessList, Hash, Transaction
             Transaction(
                 ty=1,
                 nonce=0,
-                gas_price=1000000000,
+                gas_price=20_000_000_000,00000000,
                 to=None,
                 access_list=[AccessList(address=0x123, storage_keys=[0x456, 0x789])],
             ),

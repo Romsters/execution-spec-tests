@@ -64,7 +64,7 @@ def test_legacy_calls_eof_sstore(
         sender=sender,
         to=address_test_contract,
         gas_limit=50_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         data="",
     )

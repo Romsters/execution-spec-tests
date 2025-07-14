@@ -94,7 +94,7 @@ def test_initcode_revert(state_test: StateTestFiller, pre: Alloc, revert: bytes)
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -133,7 +133,7 @@ def test_initcode_aborts(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -235,7 +235,7 @@ def test_eofcreate_deploy_sizes(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -329,7 +329,7 @@ def test_auxdata_size_failures(state_test: StateTestFiller, pre: Alloc, auxdata_
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
         data=auxdata_bytes,
@@ -384,7 +384,7 @@ def test_eofcreate_insufficient_stipend(
     tx = Transaction(
         to=contract_address,
         gas_limit=10_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -443,7 +443,7 @@ def test_insufficient_initcode_gas(
     tx = Transaction(
         to=contract_address,
         gas_limit=gas_limit,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -501,7 +501,7 @@ def test_insufficient_gas_memory_expansion(
     tx = Transaction(
         to=contract_address,
         gas_limit=gas_limit,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
@@ -568,7 +568,7 @@ def test_insufficient_returncode_auxdata_gas(
     tx = Transaction(
         to=contract_address,
         gas_limit=gas_limit,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )

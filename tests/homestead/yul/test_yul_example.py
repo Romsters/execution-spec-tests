@@ -41,7 +41,7 @@ def test_yul(state_test: StateTestFiller, pre: Alloc, yul: YulCompiler, fork: Fo
         sender=sender,
         to=contract_address,
         gas_limit=500000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False if fork in [Frontier, Homestead] else True,
     )
 

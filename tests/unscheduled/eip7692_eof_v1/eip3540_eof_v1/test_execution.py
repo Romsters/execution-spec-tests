@@ -56,7 +56,7 @@ def test_eof_execution(
     tx = Transaction(
         to=caller_address,
         gas_limit=1_000_000,
-        gas_price=10,
+        gas_price=20_000_000_000,
         protected=False,
         sender=sender,
     )
