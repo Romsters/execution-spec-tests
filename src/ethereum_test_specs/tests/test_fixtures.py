@@ -130,7 +130,7 @@ def test_fill_state_test(
     env = Environment(
         fee_recipient="0x2adc25665018aa1fe0e6bc666dac8fc2697ff9ba",
         difficulty=0x20000,
-        gas_limit=10000000000,
+        gas_limit=10000000,
         number=1,
         timestamp=1000,
     )
@@ -145,7 +145,7 @@ def test_fill_state_test(
             chain_id=0x0,
             nonce=0,
             to="0x1000000000000000000000000000000000000000",
-            gas_limit=100000000,
+            gas_limit=100000,
             gas_price=20_000_000_000,
             protected=False,
         )
@@ -155,7 +155,7 @@ def test_fill_state_test(
             chain_id=0x1,
             nonce=0,
             to="0x1000000000000000000000000000000000000000",
-            gas_limit=100000000,
+            gas_limit=100000,
             gas_price=20_000_000_000,
             access_list=[
                 AccessList(
