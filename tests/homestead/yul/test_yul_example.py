@@ -12,6 +12,7 @@ from ethereum_test_tools import (
     YulCompiler,
 )
 
+from config import EnvConfig
 
 @pytest.mark.valid_from("Homestead")
 def test_yul(state_test: StateTestFiller, pre: Alloc, yul: YulCompiler, fork: Fork):
@@ -35,9 +36,11 @@ def test_yul(state_test: StateTestFiller, pre: Alloc, yul: YulCompiler, fork: Fo
     )
     sender = pre.fund_eoa(amount=0x0BA1A9CE0BA1A9CE)
 
+    chain_id: int = EnvConfig().remote_nodes[0].chain_id
+
     tx = Transaction(
         ty=0x0,
-        chain_id=0x01,
+        chain_id=chain_id,
         sender=sender,
         to=contract_address,
         gas_limit=500000,
