@@ -21,6 +21,8 @@ from ethereum_test_tools import (
 )
 from ethereum_test_tools.vm.opcode import Opcodes as Op
 
+from config import EnvConfig
+
 from .spec import ref_spec_3651
 
 REFERENCE_SPEC_GIT_PATH = ref_spec_3651.git_path
@@ -99,9 +101,11 @@ def test_warm_coinbase_call_out_of_gas(
     )
     caller_address = pre.deploy_contract(caller_code)
 
+    chain_id: int = EnvConfig().remote_nodes[0].chain_id
+
     tx = Transaction(
         ty=0x0,
-        chain_id=0x01,
+        chain_id=chain_id,
         nonce=0,
         to=caller_address,
         gas_limit=100_000,
@@ -239,9 +243,11 @@ def test_warm_coinbase_gas_usage(
     else:
         expected_gas = 2600  # Cold account access cost before EIP-3651
 
+    chain_id: int = EnvConfig().remote_nodes[0].chain_id
+
     tx = Transaction(
         ty=0x0,
-        chain_id=0x01,
+        chain_id=chain_id,
         nonce=0,
         to=measure_address,
         gas_limit=100_000,
