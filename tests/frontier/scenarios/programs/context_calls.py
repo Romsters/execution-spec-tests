@@ -5,6 +5,7 @@ from functools import cached_property
 from ethereum_test_forks import Byzantium, Cancun, Constantinople, Fork, Istanbul, London, Shanghai
 from ethereum_test_tools import Alloc, Bytecode
 from ethereum_test_tools.vm.opcode import Opcodes as Op
+from config import EnvConfig
 
 from ..common import (
     ProgramResult,
@@ -427,7 +428,8 @@ class ProgramChainid(ScenarioTestProgram):
 
     def result(self) -> ProgramResult:
         """Test result."""
-        return ProgramResult(result=1, from_fork=Istanbul)
+        chain_id: int = EnvConfig().remote_nodes[0].chain_id
+        return ProgramResult(result=chain_id, from_fork=Istanbul)
 
 
 class ProgramSelfbalance(ScenarioTestProgram):

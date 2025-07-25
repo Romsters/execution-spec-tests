@@ -178,6 +178,7 @@ def valid_gas_test_case(initcode: Initcode, gas_test_case: str) -> bool:
     return True
 
 
+@pytest.mark.access_list
 @pytest.mark.parametrize(
     "initcode,gas_test_case",
     [
