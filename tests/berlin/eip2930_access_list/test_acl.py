@@ -11,6 +11,7 @@ from ethereum_test_tools import (
     Transaction,
 )
 from ethereum_test_tools import Opcodes as Op
+from config import EnvConfig
 
 REFERENCE_SPEC_GIT_PATH = "EIPS/eip-2930.md"
 REFERENCE_SPEC_VERSION = "c9db53a936c5c9cbe2db32ba0d1b86c4c6e73534"
@@ -27,9 +28,11 @@ def test_access_list(state_test: StateTestFiller, pre: Alloc):
     )
     sender = pre.fund_eoa(0x300000)
 
+    chain_id: int = EnvConfig().remote_nodes[0].chain_id
+
     tx = Transaction(
         ty=1,
-        chain_id=0x01,
+        chain_id=chain_id,
         to=contract_address,
         value=1,
         gas_limit=323328,
